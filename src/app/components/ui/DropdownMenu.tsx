@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { DropdownMenuProps } from "@/app/utils";
 import { useState, useRef, useEffect } from "react";
 
@@ -9,7 +9,6 @@ const DropdownMenu: React.FC<DropdownMenuProps> = ({ menuItems }) => {
   const toggleDropdown = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
   };
-
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {

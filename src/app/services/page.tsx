@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import star from "@/app/assets/icons/star.svg";
 import rightArrow from "@/app/assets/icons/Right Arrow.svg";
@@ -5,7 +6,9 @@ import { services } from "../utils";
 import ButtonSecondary from "../components/ui/buttonSecondary";
 import stackDesktop from "@/app/assets/images/stacked-desktop.png";
 import stackMobile from "@/app/assets/images/stacked-mobile.png";
+import { useRouter } from "next/navigation";
 const Services = () => {
+  const router = useRouter();
   return (
     <section>
       <section>
@@ -50,12 +53,13 @@ const Services = () => {
                     <h3 className="font-semibold text-4xl">{service.title}</h3>
                     <p className="font-medium text-lg">{service.description}</p>
 
-                    <div className="flex items-center gap-4">
-                      <button className="text-lg font-medium">
-                        Learn More
-                      </button>
+                    <button
+                      onClick={() => router.push(`services/${service.id}`)}
+                      className="text-lg flex items-center gap-4 font-medium"
+                    >
+                      Learn More
                       <Image src={rightArrow} alt="arrow" />
-                    </div>
+                    </button>
                   </div>
                 </div>
               ))}

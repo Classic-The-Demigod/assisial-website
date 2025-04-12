@@ -44,7 +44,7 @@ body {
     max-width: 320px;
     margin: 0 auto;
   }
-  
+
   /* Ensure dropdown content scrolls properly on mobile */
   .dropdown-content {
     max-height: 50vh;
@@ -52,4 +52,6 @@ body {
   }
 }
 
-
+button {
+  cursor: pointer;
+}

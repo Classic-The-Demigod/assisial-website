@@ -14,6 +14,13 @@ interface Service {
   title: string;
   description: string;
   icon: string;
+  services: string[];
+  benefits: benefit[];
+}
+
+interface benefit {
+  title: string;
+  content: string;
 }
 
 interface Testimonial {
@@ -62,6 +69,37 @@ export const services: Service[] = [
     description:
       "Our Public Relations strategies help your brand craft the right message, foster strong relationships, and m...",
     icon: userOctagon,
+    services: [
+      "Brand Awareness Campaigns",
+      "Media Planning & Buying",
+      "Press Releases & Media Outreach",
+      "Influencer & Community Engagement",
+      "Reputation Management",
+    ],
+    benefits: [
+      {
+        title: "Enhanced Brand Awareness –",
+        content: "Reach a wider audience with targeted advertising.",
+      },
+      {
+        title: "Credibility & Trust –",
+        content:
+          "Strengthen your reputation with media coverage and PR efforts.",
+      },
+      {
+        title: "Higher Engagement –",
+        content: "Craft compelling stories that resonate with your audience.",
+      },
+      {
+        title: "Crisis Management –",
+        content: "Proactively handle public perception and reputation risks.",
+      },
+      {
+        title: "Increased Sales & Leads –",
+        content:
+          " Effective PR and advertising drive customer interest and conversions.",
+      },
+    ],
   },
   {
     id: 2,
@@ -69,6 +107,35 @@ export const services: Service[] = [
     description:
       "Strategic marketing solutions that boost visibility, engage audiences, and drive real results for your brand",
     icon: globalRefresh,
+    services: [
+      "Social Media Marketing & Management",
+      "SEO & SEM Strategies",
+      "Email & Content Marketing",
+      "PPC & Performance Advertising",
+      "Data Analytics & Conversion Optimization",
+    ],
+    benefits: [
+      {
+        title: "Higher Website Traffic –",
+        content: "Drive qualified leads through SEO and PPC campaigns.",
+      },
+      {
+        title: "Better Conversion Rates –",
+        content: "Optimize your marketing funnel to maximize sales.",
+      },
+      {
+        title: "Stronger Online Presence –",
+        content: "Use advanced targeting techniques for better ROI.",
+      },
+      {
+        title: "Targeted Audience Reach –",
+        content: "Establish authority across social media and search engines.",
+      },
+      {
+        title: "Data-Driven Insights –",
+        content: "Make informed decisions based on real-time analytics.",
+      },
+    ],
   },
   {
     id: 3,
@@ -76,6 +143,37 @@ export const services: Service[] = [
     description:
       "Our targeted advertising strategies ensure your brand gets in front of the right audience at the right time...",
     icon: routeSquare,
+    services: [
+      "Brand Awareness Campaigns",
+      "Media Planning & Buying",
+      "Press Releases & Media Outreach",
+      "Influencer & Community Engagement",
+      "Reputation Management",
+    ],
+    benefits: [
+      {
+        title: "Enhanced Brand Awareness –",
+        content: "Reach a wider audience with targeted advertising.",
+      },
+      {
+        title: "Credibility & Trust –",
+        content:
+          "Strengthen your reputation with media coverage a nd PR efforts.",
+      },
+      {
+        title: "Higher Engagement –",
+        content: "Craft compelling stories that resonate with your audience.",
+      },
+      {
+        title: "Crisis Management –",
+        content: "Proactively handle public perception and reputation risks.",
+      },
+      {
+        title: "Increased Sales & Leads –",
+        content:
+          "Effective PR and advertising drive customer interest and conversions.",
+      },
+    ],
   },
   {
     id: 4,
@@ -83,6 +181,35 @@ export const services: Service[] = [
     description:
       "Our business consulting services provide expert guidance to help you streamline operations, optimize...",
     icon: briefcase,
+    services: [
+      "Market Research & Competitive Analysis",
+      "Business Development & Expansion Plans",
+      "Brand Strategy & Positioning",
+      "Financial & Operational Consulting",
+    ],
+    benefits: [
+      {
+        title: "Improved Decision-Making –",
+        content: "Leverage market research and strategic insights.",
+      },
+      {
+        title: "Optimized Business Processes –",
+        content: "Enhance productivity and eliminate inefficiencies.",
+      },
+      {
+        title: "Higher Profitability –",
+        content: "Develop strategies to maximize revenue and reduce costs.",
+      },
+      {
+        title: "Stronger Competitive Edge –",
+        content:
+          "Stay ahead with industry-specific insights and innovative approaches.",
+      },
+      {
+        title: "Scalable Business Growth –",
+        content: "Implement frameworks for sustainable expansion.",
+      },
+    ],
   },
   {
     id: 5,
@@ -90,6 +217,36 @@ export const services: Service[] = [
     description:
       "We connect businesses with top talent through strategic recruitment solutions, ensuring th...",
     icon: people,
+    services: [
+      "Executive & Specialized Recruitment",
+      "Employer Branding & Talent Strategy",
+      "HR Consulting & Workforce Planning",
+      "Onboarding & Employee Retention Programs",
+    ],
+    benefits: [
+      {
+        title: "Access to Qualified Candidates –",
+        content: "We connect you with the right professionals for your needs.",
+      },
+      {
+        title: "Faster Hiring Process –",
+        content:
+          "Reduce time-to-hire with our streamlined recruitment strategies.",
+      },
+      {
+        title: "Better Employee Fit –",
+        content:
+          "Match candidates to your company culture and role requirements.",
+      },
+      {
+        title: "Stronger Employer Brand –",
+        content: "Improve your company’s reputation to attract top talent.",
+      },
+      {
+        title: "Reduced Turnover Rates –",
+        content: "Implement strategies that increase employee retention.",
+      },
+    ],
   },
   {
     id: 6,
@@ -97,6 +254,34 @@ export const services: Service[] = [
     description:
       "Effortlessly manage projects, improve team collaboration, and s...",
     icon: emptyWallet,
+    services: [
+      "Agile & Traditional Project Management",
+      "Process Improvement & Workflow Optimization",
+      "Risk Assessment & Mitigation Strategies",
+      "Stakeholder & Team Coordination",
+    ],
+    benefits: [
+      {
+        title: "On-Time & On-Budget Delivery –",
+        content: "Keep projects within deadlines and financial constraints.",
+      },
+      {
+        title: "Reduced Risks & Challenges –",
+        content: "Identify and mitigate potential project roadblocks.",
+      },
+      {
+        title: "Improved Team Collaboration –",
+        content: "Streamline workflows and communication.",
+      },
+      {
+        title: "Higher Project Success Rate –",
+        content: "Ensure quality execution and goal achievement.",
+      },
+      {
+        title: "Efficient Resource Utilization –",
+        content: "Maximize efficiency and minimize waste.",
+      },
+    ],
   },
 ];
 
