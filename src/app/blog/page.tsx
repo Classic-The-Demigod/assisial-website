@@ -31,7 +31,7 @@ const Blog = () => {
       </section>
 
       <section>
-        <main className="px-4 py-16">
+        <main className="mx-5 my-16">
           <div className="text-center space-y-4">
             <h1 className="md:text-8xl text-3xl font-extrabold text-[#7B7B7B73]">
               BLOGS/NEWS

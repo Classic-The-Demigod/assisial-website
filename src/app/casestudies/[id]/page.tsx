@@ -7,7 +7,7 @@ import ButtonSecondary from "@/app/components/ui/buttonSecondary";
 import arrowCircle from "@/app/assets/icons/arrow-circle.svg";
 import stackDesktop from "@/app/assets/images/stacked-desktop.png";
 import stackMobile from "@/app/assets/images/stacked-mobile.png";
-const page = () => {
+const ProjectDetails = () => {
   return (
     <section>
       <section>
@@ -342,4 +342,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default ProjectDetails;

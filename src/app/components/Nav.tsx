@@ -13,7 +13,6 @@ const Nav = () => {
   const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 768) {
@@ -25,7 +24,6 @@ const Nav = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
- 
   const handleRouteClick = () => {
     setIsMenuOpen(false);
   };
@@ -112,7 +110,6 @@ const Nav = () => {
       {/* Desktop Navigation */}
       <div className="hidden md:flex items-center py-2 border border-black rounded-4xl">
         {routes.map((route, index) => {
-  
           const isActive =
             pathname === route.path ||
             (route.path !== "/" && pathname.startsWith(route.path + "/"));
@@ -179,22 +176,24 @@ const Nav = () => {
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div
-            className="fixed top-0 right-0 h-full w-64 bg-white z-50 shadow-lg md:hidden"
+            className="fixed top-0 right-0 h-full w-full bg-white z-50 shadow-lg md:hidden"
             initial="closed"
             animate="open"
             exit="closed"
             variants={menuVariants}
           >
             <div className="flex justify-between items-center p-4 border-b">
-              <motion.span
-                className="text-[16px] font-bold"
-                variants={itemVariants}
+              <motion.div
+                initial="initial"
+                animate="animate"
+                variants={logoVariants}
               >
-                Menu
-              </motion.span>
+                <Image src={logoBlack} alt="Logo" />
+              </motion.div>
+
               <motion.button
                 onClick={() => setIsMenuOpen(false)}
-                className="p-2 rounded-full hover:bg-gray-100"
+                className="p-2 rounded-full hover:bg-gray-100 font-bold text-3xl"
                 whileHover={{ rotate: 90 }}
                 whileTap={{ scale: 0.9 }}
                 variants={itemVariants}
@@ -205,7 +204,6 @@ const Nav = () => {
 
             <div className="flex flex-col py-4">
               {routes.map((route) => {
-              
                 const isActive =
                   pathname === route.path ||
                   (route.path !== "/" && pathname.startsWith(route.path + "/"));
@@ -233,15 +231,14 @@ const Nav = () => {
 
               <motion.div className="mt-6 px-4" variants={itemVariants}>
                 <motion.button
-                  className="flex w-full items-center justify-center gap-2 px-3 py-2 text-white bg-gradient-to-r from-[#160F92] to-[#AF47AA] rounded-4xl"
+                  className="flex min-w-[180px] items-center gap-2 px-3 justify-center py-2 text-white bg-gradient-to-r from-[#160F92] to-[#AF47AA] rounded-4xl"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 0.5, duration: 0.3 }}
                 >
-                  <Link
-                    href="/"
-                    className="text-[16px] font-bold"
-                    onClick={handleRouteClick}
-                  >
+                  <Link href="/" className="text-[16px] font-bold">
                     Get Started
                   </Link>
                   <motion.span

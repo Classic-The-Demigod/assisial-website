@@ -40,6 +40,21 @@ interface faq {
   answer: string;
 }
 
+export interface SecretList {
+  id: number;
+  title: string;
+  content: string;
+}
+
+export interface MenuItem {
+  label: string;
+  items: string[];
+}
+
+export interface DropdownMenuProps {
+  menuItems: MenuItem[];
+}
+
 export const services: Service[] = [
   {
     id: 1,
@@ -283,5 +298,67 @@ export const faqData: faq[] = [
     question: "How can I get started with your services?",
     answer:
       "Getting started is easy! Simply schedule a consultation through our website or call us directly. We'll discuss your needs, develop a tailored proposal, and once approved, begin with a strategic planning session to align our approach with your business goals.",
+  },
+];
+
+export const SecretLists: SecretList[] = [
+  {
+    id: 1,
+    title: "User-Centered Approach",
+    content:
+      "The best UX/UI designs start with understanding the user.Through user research, journey mapping, and usability testin designers craft experiences that align with user expectations and behaviors. A design that puts users first leads to higher engagement and retention.",
+  },
+  {
+    id: 2,
+    title: "Simplicity is Key",
+    content:
+      "The most effective designs are often the simplest. Cluttered interfaces overwhelm users, while clean, minimalistic designs make navigation effortless. Every element should have a purpose, reducing cognitive load and guiding users seamlessly.",
+  },
+  {
+    id: 3,
+    title: "Visual Hierarchy & Consistency",
+    content:
+      "A well-structured UI guides users effortlessly. Strategic placement of elements, bold typography, and contrasting colors help users navigate with ease. Consistency in design—using the same styles for buttons, typography, and spacing—builds familiarity and trust.",
+  },
+  {
+    id: 4,
+    title: "Accessibility & Inclusivity",
+    content:
+      "A truly great UX/UI design is accessible to all users, including those with disabilities. Features like color contrast, readable fonts, voice navigation, and alternative text for images ensure an inclusive experience for everyone.",
+  },
+  {
+    id: 5,
+    title: "Micro interactions & Animation",
+    content:
+      "Small details make a big impact. Subtle animations, hover effects, and transitions add a touch of delight to the user experience, making interactions feel more natural and engaging.",
+  },
+  {
+    id: 6,
+    title: "Data-Driven Design",
+    content:
+      "Successful UX/UI isn’t based on guesswork—it’s backed by analytics, user feedback, and A/B testing. Continuous iteration ensures the design evolves to meet user needs and business goals effectively.",
+  },
+];
+
+export const menuData: MenuItem[] = [
+  {
+    label: "Marketing & Advertising",
+    items: [
+      "Digital Marketing Manager",
+      "Social Media Strategist",
+      "Content Writer & Copywriter",
+    ],
+  },
+  {
+    label: "Business & Strategy",
+    items: ["Business Consultant", "Project Manager", "Brand Strategist"],
+  },
+  {
+    label: "Design & Development",
+    items: ["UI/UX Designer", "Graphic Designer", "Web Developer"],
+  },
+  {
+    label: "Recruitment & HR",
+    items: ["Talent Acquisition Specialist", "HR Business Partner"],
   },
 ];

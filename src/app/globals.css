@@ -32,3 +32,24 @@ body {
   background-size: cover;
   background-position: center;
 }
+
+.square-marker {
+  list-style: square;
+}
+
+@media (max-width: 768px) {
+  /* Make dropdowns stack better on mobile */
+  .dropdown-container {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+  
+  /* Ensure dropdown content scrolls properly on mobile */
+  .dropdown-content {
+    max-height: 50vh;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+

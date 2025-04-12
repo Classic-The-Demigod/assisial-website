@@ -69,7 +69,7 @@ interface FAQProps {
 }
 
 const FAQs: React.FC<FAQProps> = ({ faqs }) => {
-  const [openId, setOpenId] = useState<string | null>("faq-2"); // Default open item
+  const [openId, setOpenId] = useState<string | null>(""); // Default open item
 
   const toggleItem = (id: string) => {
     setOpenId(openId === id ? null : id);
