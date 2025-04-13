@@ -108,7 +108,7 @@ const Nav = () => {
       </motion.div>
 
       {/* Desktop Navigation */}
-      <div className="hidden md:flex items-center py-2 border border-black rounded-4xl">
+      <div className="hidden md:flex min-h-[66px] items-center py-2 border border-black rounded-4xl">
         {routes.map((route, index) => {
           const isActive =
             pathname === route.path ||

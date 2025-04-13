@@ -109,48 +109,7 @@ const ResponsiveSlider = () => {
         </div>
       </div>
 
-      {/* Navigation buttons */}
-      <button
-        onClick={goToPrev}
-        className="absolute top-1/2 left-2 -translate-y-1/2 bg-white p-2 rounded-full shadow-md z-10"
-        aria-label="Previous slide"
-      >
-        <svg
-          className="w-6 h-6"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M15 19l-7-7 7-7"
-          />
-        </svg>
-      </button>
 
-      <button
-        onClick={goToNext}
-        className="absolute top-1/2 right-2 -translate-y-1/2 bg-white p-2 rounded-full shadow-md z-10"
-        aria-label="Next slide"
-      >
-        <svg
-          className="w-6 h-6"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M9 5l7 7-7 7"
-          />
-        </svg>
-      </button>
 
       {/* Dots indicators */}
       <div className="flex justify-center mt-4 space-x-2">

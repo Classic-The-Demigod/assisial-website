@@ -7,6 +7,9 @@ import routeSquare from "@/app/assets/icons/route-square.svg";
 import Mike from "@/app/assets/images/Ellipse 6.png";
 import David from "@/app/assets/images/Ellipse 1.png";
 import Sarah from "@/app/assets/images/Ellipse 4.png";
+import Image1 from "@/app/assets/images/blog-image1.png";
+import Image2 from "@/app/assets/images/blog-image2.png";
+import Image3 from "@/app/assets/images/blog-image3.png";
 import { StaticImageData } from "next/image";
 
 interface Service {
@@ -32,9 +35,9 @@ interface Testimonial {
   quote: string;
 }
 
-interface SlideProps {
+export interface SlideProps {
   id: number;
-  imageSrc: string;
+  imageSrc: string | StaticImageData;
   title: string;
   description: string;
   appLabel: string;
@@ -372,7 +375,7 @@ export const testimonials: Testimonial[] = [
 export const slides: SlideProps[] = [
   {
     id: 1,
-    imageSrc: "/images/design-slide-1.jpg",
+    imageSrc: Image1,
     title: "Unraveling Design: The Science Behind UI/UX",
     description:
       "In today's digital world, a product's success isn't just about looks—it's about experience. UI/User Experience(UX)/UI user interface design work hand in hand to create seamless, engaging and intuitive interactions.",
@@ -381,7 +384,7 @@ export const slides: SlideProps[] = [
   },
   {
     id: 2,
-    imageSrc: "/images/design-slide-2.jpg",
+    imageSrc: Image2,
     title: "Unraveling Design: The Science Behind UI/UX",
     description:
       "In today's digital world, a product's success isn't just about looks—it's about experience. UI/User Experience(UX)/UI user interface design work hand in hand to create seamless, engaging and intuitive interactions.",
@@ -390,7 +393,7 @@ export const slides: SlideProps[] = [
   },
   {
     id: 3,
-    imageSrc: "/images/design-slide-3.jpg",
+    imageSrc: Image3,
     title: "Unraveling Design: The Science Behind UI/UX",
     description:
       "In today's digital world, a product's success isn't just about looks—it's about experience. UI/User Experience(UX)/UI user interface design work hand in hand to create seamless, engaging and intuitive interactions.",
@@ -399,58 +402,14 @@ export const slides: SlideProps[] = [
   },
   {
     id: 4,
-    imageSrc: "/images/design-slide-1.jpg",
+    imageSrc: Image1,
     title: "Unraveling Design: The Science Behind UI/UX",
     description:
       "In today's digital world, a product's success isn't just about looks—it's about experience. UI/User Experience(UX)/UI user interface design work hand in hand to create seamless, engaging and intuitive interactions.",
     appLabel: "Adobe XD",
     buttonText: "UX Exploration",
   },
-  {
-    id: 5,
-    imageSrc: "/images/design-slide-2.jpg",
-    title: "Unraveling Design: The Science Behind UI/UX",
-    description:
-      "In today's digital world, a product's success isn't just about looks—it's about experience. UI/User Experience(UX)/UI user interface design work hand in hand to create seamless, engaging and intuitive interactions.",
-    appLabel: "Adobe XD",
-    buttonText: "UX Exploration",
-  },
-  {
-    id: 6,
-    imageSrc: "/images/design-slide-3.jpg",
-    title: "Unraveling Design: The Science Behind UI/UX",
-    description:
-      "In today's digital world, a product's success isn't just about looks—it's about experience. UI/User Experience(UX)/UI user interface design work hand in hand to create seamless, engaging and intuitive interactions.",
-    appLabel: "Adobe XD",
-    buttonText: "UX Exploration",
-  },
-  {
-    id: 7,
-    imageSrc: "/images/design-slide-1.jpg",
-    title: "Unraveling Design: The Science Behind UI/UX",
-    description:
-      "In today's digital world, a product's success isn't just about looks—it's about experience. UI/User Experience(UX)/UI user interface design work hand in hand to create seamless, engaging and intuitive interactions.",
-    appLabel: "Adobe XD",
-    buttonText: "UX Exploration",
-  },
-  {
-    id: 8,
-    imageSrc: "/images/design-slide-2.jpg",
-    title: "Unraveling Design: The Science Behind UI/UX",
-    description:
-      "In today's digital world, a product's success isn't just about looks—it's about experience. UI/User Experience(UX)/UI user interface design work hand in hand to create seamless, engaging and intuitive interactions.",
-    appLabel: "Adobe XD",
-    buttonText: "UX Exploration",
-  },
-  {
-    id: 9,
-    imageSrc: "/images/design-slide-3.jpg",
-    title: "Unraveling Design: The Science Behind UI/UX",
-    description:
-      "In today's digital world, a product's success isn't just about looks—it's about experience. UI/User Experience(UX)/UI user interface design work hand in hand to create seamless, engaging and intuitive interactions.",
-    appLabel: "Adobe XD",
-    buttonText: "UX Exploration",
-  },
+  
 ];
 
 export const faqData: faq[] = [

@@ -14,10 +14,11 @@ import arrowCircle from "@/app/assets/icons/arrow-circle.svg";
 import star from "@/app/assets/icons/star.svg";
 import Image from "next/image";
 import ButtonSecondary from "./components/ui/buttonSecondary";
-import { faqData, services } from "./utils";
+import { faqData, services, slides } from "./utils";
 import TestimonialCarousel from "./components/TestimonialCarousel";
 import ResponsiveSlider from "./components/ResponsiveSlider";
 import FAQs from "./components/FAQs";
+import EmblaCarousel from "./components/EmblaCarousel";
 export default function Home() {
   return (
     <section>
@@ -295,6 +296,7 @@ export default function Home() {
           </div>
 
           {/* <ResponsiveSlider /> */}
+          {/* <EmblaCarousel slides={slides} /> */}
         </main>
       </section>
 
