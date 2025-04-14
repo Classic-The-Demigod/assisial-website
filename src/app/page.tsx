@@ -271,7 +271,7 @@ export default function Home() {
           <h1 className="md:text-8xl text-3xl font-extrabold text-[#7B7B7B73]">
             CLIENTS TESTIMONIALS
           </h1>
-          {/* <TestimonialCarousel /> */}
+          <TestimonialCarousel />
         </main>
       </section>
 
@@ -296,7 +296,10 @@ export default function Home() {
           </div>
 
           {/* <ResponsiveSlider /> */}
-          {/* <EmblaCarousel slides={slides} /> */}
+          <div className="md:mx-20">
+
+          <EmblaCarousel slides={slides} />
+          </div>
         </main>
       </section>
 

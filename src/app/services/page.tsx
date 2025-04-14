@@ -7,6 +7,7 @@ import ButtonSecondary from "../components/ui/buttonSecondary";
 import stackDesktop from "@/app/assets/images/stacked-desktop.png";
 import stackMobile from "@/app/assets/images/stacked-mobile.png";
 import { useRouter } from "next/navigation";
+import TestimonialCarousel from "../components/TestimonialCarousel";
 const Services = () => {
   const router = useRouter();
   return (
@@ -65,6 +66,12 @@ const Services = () => {
               ))}
             </div>
           </div>
+        </main>
+      </section>
+
+      <section>
+        <main>
+          <TestimonialCarousel />
         </main>
       </section>
 

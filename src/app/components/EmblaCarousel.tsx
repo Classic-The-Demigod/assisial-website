@@ -1,7 +1,6 @@
-"use client"
+"use client";
 import React, { useCallback } from "react";
 import { EmblaOptionsType, EmblaCarouselType } from "embla-carousel";
-
 import Autoplay from "embla-carousel-autoplay";
 import useEmblaCarousel from "embla-carousel-react";
 import {
@@ -54,40 +53,39 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
           {slides.map((slide, i) => (
             <div
               key={i}
-              className="flex flex-col gap-4 px-4 py-6 border-3 border-[#0D0D0D]/28 rounded-3xl"
+              className="embla__slide" // Add this class for proper spacing
             >
-              <Image src={slide.imageSrc} alt="blog-img" />
-
-              <div className="flex items-center gap-2">
-                <ButtonSecondary>Mobile App</ButtonSecondary>
-                <button className="p-3 text-white bg-gradient-to-r min-w-[180px] from-[#160F92] to-[#AF47AA] rounded-4xl font-bold">
-                  19th March, 2025
-                </button>
+              <div className="flex flex-col gap-4 px-4 py-6 border-3 border-[#0D0D0D]/28 rounded-3xl">
+                <Image src={slide.imageSrc} alt="blog-img" />
+                <div className="flex items-center gap-2">
+                  <ButtonSecondary>Mobile App</ButtonSecondary>
+                  <button className="p-3 text-white bg-gradient-to-r min-w-[180px] from-[#160F92] to-[#AF47AA] rounded-4xl font-bold">
+                    19th March, 2025
+                  </button>
+                </div>
+                <h1 className="text-2xl font-extrabold">{slide.title}</h1>
+                <p className="text-[#9B9B9B]">{slide.description}</p>
               </div>
-              <h1 className="text-2xl font-extrabold">{slide.title}</h1>
-              <p className="text-[#9B9B9B]">{slide.description}</p>
             </div>
           ))}
         </div>
       </div>
 
       <div className="embla__controls">
-        <div className="embla__buttons">
+        {/* <div className="embla__buttons">
           <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
           <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
-        </div>
+        </div> */}
 
         <div className="embla__dots">
           {scrollSnaps.map((_, index) => (
             <DotButton
               key={index}
               onClick={() => onDotButtonClick(index)}
-              className={"embla__dot".concat(
-                index === selectedIndex
-                  ? "embla__dot--selected"
-                  : ""
-              )}
-            ></DotButton>
+              className={`embla__dot ${
+                index === selectedIndex ? "embla__dot--selected" : ""
+              }`}
+            />
           ))}
         </div>
       </div>
