@@ -3,8 +3,19 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --bg-service-card: rgba(255, 255, 255, 0.29)
   --bg-image: url("./assets/images/bg_white.png");
 }
+
+
+.dark {
+  
+  --background: #000000;
+  --foreground: #ededed;
+  --bg-image: url("./assets/images/bg_dark.png");
+}
+
+
 
 @theme inline {
   --color-background: var(--background);

@@ -23,7 +23,7 @@ export default function Home() {
   return (
     <section>
       {/* Hero Section */}
-      <main className=" hero px-4 pb-10">
+      <main className="hero px-4 pb-10">
         <div className="">
           <Nav />
         </div>
@@ -137,7 +137,7 @@ export default function Home() {
                 <div className="min-w-5 h-20 bg-[#813798] mt-8 rounded-l-full"></div>
 
                 <div className="flex flex-col justify-between gap-6 h-full rounded-3xl border-3 p-6 border-[#0D0D0D47] overflow-hidden">
-                  <div className="bg-[#0D0D0D1A] p-4 rounded-full w-20 h-20 flex items-center justify-center">
+                  <div className="bg-[#FFFFFF1] p-4 rounded-full w-20 h-20 flex items-center justify-center">
                     <Image src={service.icon} alt={service.title} />
                   </div>
 
@@ -297,8 +297,7 @@ export default function Home() {
 
           {/* <ResponsiveSlider /> */}
           <div className="md:mx-20">
-
-          <EmblaCarousel slides={slides} />
+            <EmblaCarousel slides={slides} />
           </div>
         </main>
       </section>

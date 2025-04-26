@@ -102,7 +102,7 @@ const Nav = () => {
   };
 
   return (
-    <nav className="relative flex items-center justify-between p-4">
+    <nav className="top-0 flex items-center justify-between p-4">
       <motion.div initial="initial" animate="animate" variants={logoVariants}>
         <Image src={logoBlack} alt="Logo" />
       </motion.div>

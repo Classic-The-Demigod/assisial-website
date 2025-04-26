@@ -6,6 +6,7 @@ import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import { usePathname } from "next/navigation";
 import path from "path";
+import ThemeProvider from "./provider/ThemeProvider";
 
 const syne = Syne({
   variable: "--font-syne",
@@ -27,11 +28,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${syne.variable}  antialiased`}>
-        <section className="font-primary">
-          {pathname === "/" ? null : <Nav />}
-          {children}
-          <Footer />
-        </section>
+        <ThemeProvider>
+          <section className="font-primary">
+            {pathname === "/" ? null : <Nav />}
+            {children}
+            <Footer />
+          </section>
+        </ThemeProvider>
       </body>
     </html>
   );

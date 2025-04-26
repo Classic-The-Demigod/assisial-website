@@ -6,6 +6,7 @@ import Instagram from "@/app/assets/images/Instagram.png";
 import Send from "@/app/assets/images/Send.png";
 
 import Link from "next/link";
+import ThemeToggle from "./ThemeToggle";
 const Footer = () => {
   return (
     <section className="p-6">
@@ -21,7 +22,7 @@ const Footer = () => {
       <div className="flex flex-col md:flex-row justify-between sm:gap-0 gap-6 mt-6 ">
         <div className="space-y-6 hidden sm:block w-full max-w-[300px]">
           <Image src={A} alt="Logo" />
-
+          <ThemeToggle />
           <p className="md:text-xl text-[16px] font-medium">
             Helping brands grow with creative advertising, strategic marketing,
             and innovative business solutions.{" "}
